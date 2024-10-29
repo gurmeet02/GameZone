@@ -41,9 +41,7 @@ export default function TopRatedPage() {
           loaded: true,
         })
       );
-    console.log(yearGames);
   }, [page, currentYear, currentDate]);
-  console.log(yearGames);
   document.title = `GameZone | ${currentYear} Games | ${page}`;
 
   return (
