@@ -45,7 +45,7 @@ export default function GamePage() {
           loaded: true,
         })
       );
-  }, [click]);
+  }, [click, id]);
 
   const [showMore, setShowMore] = useState(false);
 
@@ -157,7 +157,7 @@ export default function GamePage() {
                 return (
                   <li key={index} className="text-light font-normal text-base">
                     {platform.platform.name}
-                    {index != platforms.length - 1 ? "," : ""}
+                    {index !== platforms.length - 1 ? "," : ""}
                   </li>
                 );
               })}
