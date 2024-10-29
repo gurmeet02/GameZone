@@ -23,10 +23,10 @@ export default function SearchPage() {
       );
   }, [search]);
 
-  document.title = `GameZone | Search`
+  document.title = `GameZone | Search`;
 
   return (
-    <section className="bg-dark w-full max-lg:py-8">
+    <section className="bg-dark w-full max-lg:py-8 h-full">
       {games.loaded ? (
         <main className="p-8 gap-8 grid grid-cols-3 max-xl:grid-cols-2 max-sm:grid-cols-1">
           {games.gamesData.slice(0, 15).map((game, index) => {

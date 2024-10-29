@@ -20,7 +20,7 @@ function App() {
         <aside className="w-1/4 fixed top-[4.27rem] z-[100] max-lg:hidden">
           <Sidebar />
         </aside>
-        <main className="w-3/4 relative top-[4.27rem] lg:left-[25%] max-lg:w-full">
+        <main className="w-3/4 relative top-[4.27rem] lg:left-[25%] max-lg:w-full min-h-screen">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/top-rated" element={<TopRatedPage />} />

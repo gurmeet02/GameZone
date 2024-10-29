@@ -47,7 +47,7 @@ export default function TopRatedPage() {
   document.title = `GameZone | ${currentYear} Games | ${page}`;
 
   return (
-    <section className="bg-dark w-full p-8 max-sm:py-16">
+    <section className="bg-dark w-full p-8 max-sm:py-16 h-full">
       <h3 className="font-semibold text-[2.1rem] text-white tracking-wide pb-4">
         Top {currentYear} Games
       </h3>

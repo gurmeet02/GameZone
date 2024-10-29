@@ -73,7 +73,7 @@ export default function GamePage() {
   document.title = `GameZone | Game | ${name}`;
 
   return (
-    <section className="bg-dark w-full max-md:py-4">
+    <section className="bg-dark w-full max-md:py-4 h-fit">
       {game.loaded ? (
         <main className="p-8 max-md:px-4">
           <div className="flex gap-8 items-center max-xl:flex-col">
