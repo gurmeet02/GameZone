@@ -5,7 +5,6 @@ import ArrowIcon from "../assets/arrow_icon.svg";
 export default function TopRatedPage() {
   const [page, setPage] = useState(1);
 
-
   const nextPage = () => {
     setPage(page + 1);
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -18,14 +17,11 @@ export default function TopRatedPage() {
 
   const date = new Date();
   const month = date.getMonth() + 1;
-  
-  const currentMonth =
-  month.toString().length === 1 ? '0' + month : month
+
+  const currentMonth = month.toString().length === 1 ? "0" + month : month;
   const dd = date.getDate() + 1;
-  const currentDD =
-  dd.toString().length === 1 ? '0' + dd : dd
-  const currentDate =
-    date.getFullYear() + "-" + currentMonth + "-" + currentDD;
+  const currentDD = dd.toString().length === 1 ? "0" + dd : dd;
+  const currentDate = date.getFullYear() + "-" + currentMonth + "-" + currentDD;
 
   const currentYear = date.getFullYear();
 
@@ -42,10 +38,10 @@ export default function TopRatedPage() {
       .then((data) =>
         setyearGames({
           games: data,
-          loaded: true
+          loaded: true,
         })
       );
-  }, [page]);
+  }, [page, currentYear, currentDate]);
   console.log(yearGames);
   document.title = `GameZone | ${currentYear} Games | ${page}`;
 
@@ -57,7 +53,7 @@ export default function TopRatedPage() {
       {yearGames.loaded ? (
         <main>
           <main className="gap-x-8 gap-y-10 grid grid-cols-3 max-xl:grid-cols-2 max-sm:grid-cols-1">
-            {yearGames.games.results != undefined
+            {yearGames.games.results !== undefined
               ? yearGames.games.results.map((game, index) => {
                   return (
                     <GameCard

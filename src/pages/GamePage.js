@@ -27,7 +27,7 @@ export default function GamePage() {
           loaded: true,
         })
       );
-  }, [click]);
+  }, [click, id]);
 
   const [relatedGames, setRelatedGames] = useState({
     gameData: [],
@@ -131,7 +131,7 @@ export default function GamePage() {
                         className="text-light font-normal text-base"
                       >
                         {dev.name}
-                        {index != developers.length - 1 ? "," : ""}
+                        {index !== developers.length - 1 ? "," : ""}
                       </span>
                     );
                   })}

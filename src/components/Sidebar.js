@@ -1,13 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import HomeIcon from "../assets/home_icon.svg";
 import StarIcon from "../assets/star_icon.svg";
 import CalenderIcon from "../assets/calender_icon.svg";
 import { NavLink } from "react-router-dom";
 
 export default function Sidebar() {
-
-  const date = new Date()
-  const year = date.getFullYear()
+  const date = new Date();
+  const year = date.getFullYear();
 
   return (
     <section className="bg-dark w-full border-r border-lighter-dark overflow-y-scroll h-[36rem] Sidebar max-lg:border-r-0 max-lg:h-fit max-lg:py-0">
