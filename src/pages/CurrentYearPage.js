@@ -32,7 +32,7 @@ export default function TopRatedPage() {
 
   useEffect(() => {
     fetch(
-      `https://api.rawg.io/api/games?key=9dd3311aadfd453084bf095433ebc462&dates=${currentYear},${currentDate}&ordering=-metacritic&page=${page}`
+      `https://api.rawg.io/api/games?key=9dd3311aadfd453084bf095433ebc462&dates=${currentYear},${currentDate}&page=${page}`
     )
       .then((res) => res.json())
       .then((data) =>
@@ -41,6 +41,7 @@ export default function TopRatedPage() {
           loaded: true,
         })
       );
+    console.log(yearGames);
   }, [page, currentYear, currentDate]);
   console.log(yearGames);
   document.title = `GameZone | ${currentYear} Games | ${page}`;
