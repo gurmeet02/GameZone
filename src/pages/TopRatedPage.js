@@ -42,7 +42,7 @@ export default function TopRatedPage() {
       {ratedGames.loaded ? (
         <main>
           <main className="gap-x-8 gap-y-10 grid grid-cols-3 max-xl:grid-cols-2 max-sm:grid-cols-1">
-            {ratedGames.games.results != undefined
+            {ratedGames.games.results !== undefined
               ? ratedGames.games.results.map((game, index) => {
                   return (
                     <GameCard

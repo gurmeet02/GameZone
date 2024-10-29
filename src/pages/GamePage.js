@@ -16,7 +16,9 @@ export default function GamePage() {
 
   useEffect(() => {
     fetch(
-      `https://api.rawg.io/api/games/${id}?key=9dd3311aadfd453084bf095433ebc462`
+      `https://api.rawg.io/api/games/${
+        id ? id : ""
+      }?key=9dd3311aadfd453084bf095433ebc462`
     )
       .then((res) => res.json())
       .then((data) =>

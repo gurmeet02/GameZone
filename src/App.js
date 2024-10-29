@@ -1,4 +1,4 @@
-import React, { createContext } from "react";
+import React from "react";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import HomePage from "./pages/HomePage";
@@ -9,8 +9,8 @@ import GamePage from "./pages/GamePage";
 import SearchPage from "./pages/SearchPage";
 
 function App() {
-  const date = new Date()
-  const year = date.getFullYear()
+  const date = new Date();
+  const year = date.getFullYear();
   return (
     <BrowserRouter>
       <section className="flex flex-wrap relative bg-dark">

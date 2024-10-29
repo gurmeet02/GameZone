@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Routes, Route, BrowserRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const GameCard = ({ name, image, metacritic, releaseDate, id }) => {
   return (

@@ -22,7 +22,9 @@ export default function TrendingGames() {
   });
   useEffect(() => {
     fetch(
-      `https://api.rawg.io/api/games?key=9dd3311aadfd453084bf095433ebc462&dates=${year},${currentDate}&ordering=-metacritic`
+      `https://api.rawg.io/api/games?key=9dd3311aadfd453084bf095433ebc462&dates=${
+        year ? year : ""
+      },${currentDate ? currentDate : ""}&ordering=-metacritic`
     )
       .then((res) => res.json())
       .then((data) =>
