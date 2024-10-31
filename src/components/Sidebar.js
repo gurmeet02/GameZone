@@ -9,7 +9,7 @@ export default function Sidebar() {
   const year = date.getFullYear();
 
   return (
-    <section className="bg-dark w-full border-r border-lighter-dark overflow-y-scroll h-screen Sidebar max-lg:border-r-0 max-lg:h-fit max-lg:py-0">
+    <section className="bg-dark w-full border-r border-lighter-dark overflow-y-scroll h-screen Sidebar max-lg:border-r-0 max-lg:h-fit max-lg:py-0 max-sm:pb-4">
       <main className="text-light p-4 max-md:py-2 max-md:px-0">
         <ul className="flex gap-4 flex-col">
           <li to="/">
