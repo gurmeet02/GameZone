@@ -18,7 +18,7 @@ export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <section className="pt-4 px-10 lg:bg-secondary w-full max-md:px-8 max-lg:flex max-lg:flex-col max-lg:gap-6 max-lg:bg-dark">
+    <section className="py-4 px-10 lg:bg-secondary w-full max-md:px-8 max-lg:flex max-lg:flex-col max-lg:gap-6 max-lg:bg-dark max-sm:py-0 max-sm:pt-4">
       <nav className="flex items-center justify-between max-md:gap-6">
         <Link
           to="/"
