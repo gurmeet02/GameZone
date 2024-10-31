@@ -12,7 +12,7 @@ export default function SearchPage() {
 
   useEffect(() => {
     fetch(
-      `https://api.rawg.io/api/games?key=9dd3311aadfd453084bf095433ebc462&search=${search.search}&ordering=-metacritic&search_precise=true`
+      `https://api.rawg.io/api/games?key=${process.env.REACT_APP_API_KEY}&search=${search.search}&ordering=-metacritic&search_precise=true`
     )
       .then((res) => res.json())
       .then((data) =>

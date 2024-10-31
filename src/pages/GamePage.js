@@ -36,7 +36,7 @@ export default function GamePage() {
 
   useEffect(() => {
     fetch(
-      `https://api.rawg.io/api/games/${id}/game-series?key=9dd3311aadfd453084bf095433ebc462&ordering=-metacritic`
+      `https://api.rawg.io/api/games/${id}/game-series?key=${process.env.REACT_APP_API_KEY}&ordering=-metacritic`
     )
       .then((res) => res.json())
       .then((data) =>
@@ -73,7 +73,7 @@ export default function GamePage() {
   document.title = `GameZone | Game | ${name}`;
 
   return (
-    <section className="bg-dark w-full max-md:py-4 h-fit">
+    <section className="bg-dark w-full max-md:py-4 h-full">
       {game.loaded ? (
         <main className="p-8 max-md:px-4">
           <div className="flex gap-8 items-center max-xl:flex-col">

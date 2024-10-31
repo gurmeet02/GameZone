@@ -23,7 +23,7 @@ export default function TopRatedPage() {
 
   useEffect(() => {
     fetch(
-      `https://api.rawg.io/api/games?key=9dd3311aadfd453084bf095433ebc462&metacritic=80,100&page=${page}`
+      `https://api.rawg.io/api/games?key=${process.env.REACT_APP_API_KEY}&metacritic=80,100&page=${page}`
     )
       .then((res) => res.json())
       .then((data) =>
