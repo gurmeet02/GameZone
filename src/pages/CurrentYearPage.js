@@ -19,7 +19,7 @@ export default function TopRatedPage() {
   const month = date.getMonth() + 1;
 
   const currentMonth = month.toString().length === 1 ? "0" + month : month;
-  const dd = date.getDate() + 1;
+  const dd = date.getDate();
   const currentDD = dd.toString().length === 1 ? "0" + dd : dd;
   const currentDate = date.getFullYear() + "-" + currentMonth + "-" + currentDD;
 
